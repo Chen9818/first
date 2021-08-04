@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>event 事件處理</title>
+<script type="text/javascript">
+function over(element){  //靜態
+    element.style.color='red'
+}
+function out(element){
+    element.style.color='black'
+}
+
+</script>
+</head>
+<body>
+    <button onclick="alert('Clicked')">Click</button>
+    <span onmouseover="over(this)";
+    onmouseout="out(this)">test</span>
+
+</body>
+</html>

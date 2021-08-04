@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>event 事件處理</title>
+<script type="text/javascript">
+//用js的程式，動態的註冊事件處理器  //onload代表一載入完成網頁
+function init(){
+    var btn=document.getElementById('btn');
+    var handler=function(e){ 
+        alert(e.clientX+','+e.clientY);
+    };
+    btn.addEventListener('click'/*事件名稱，click是內建的動作*/,handler);
+    /*
+    1. 使用者點擊了按鈕，觸發click事件
+    2.瀏覽器主動收集和事件有關的資訊，並製造出event object事件物件
+      var eventObj=事件物件
+    3.呼叫已經註冊的事件處理器(事件處理函式)
+      handler(eventObj)
+      */
+    document.addEventListener('keydown',function(e){  //匿名函式:用來直接當作事件處理器
+        alert(e.keyCode) //可以用鍵盤上下左右鍵操作
+    });
+}
+</script>
+</head>
+<body onload="init()">
+    <button id='btn'>Click</button>
+
+
+</body>
+</html>

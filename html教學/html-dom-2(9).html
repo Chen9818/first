@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>html dom選單開合操作</title>
+<script type="text/javascript">
+function togglemenu(number){//toggle是反轉的意思
+    var menu=document.getElementById('menu-'+number);
+    menu.classList.toggle('hide') //切換標籤物件class的hide設定//第一個做法，讓標籤可以做開合
+    
+    /*if(menu.style.display=='none'){ //目前是藏起來的狀態//這是第二個做法
+        menu.style.display='block'
+    }else{  //目前是秀出來的狀態
+        menu.style.display='none'
+    }*/
+
+}
+
+
+</script>
+<style type="text/css">
+.hide{display: none;}
+</style>
+</head>
+<body>
+    <div onclick="togglemenu(1)">選單的標題1</div>
+    <ur id='menu-1'>
+        <li>項目1</li>
+        <li>項目2</li>
+        <li>項目3</li>
+    </ur>
+    <div onclick="togglemenu(2)">選單的標題2</div>
+    <ur id='menu-2'>
+        <li>項目1</li>
+        <li>項目2</li>
+        <li>項目3</li>
+    </ur>
+    <div onclick="togglemenu(3)">選單的標題3</div>
+    <ur id='menu-3'>
+        <li>項目1</li>
+        <li>項目2</li>
+    </ur>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>schedule 自動排程</title>
+        <meta charset="utf-8"/>
+        <script type="text/javascript">
+        function init(){
+            timer=document.getElementById('timer');
+            this.setInterval(countdown,1000) //setTimeout執行一次就會停止//setInterval則會持續執行
+        }                                    //千分之一秒//1000代表一秒
+        function countdown(){
+           timer.innerHTML=timer.innerHTML-1;
+        if(timer.innerHTML>0){    //還沒倒數到0，繼續倒數
+            // window.setTimeout(countdown,1000)  //因為上面函式是setIterval所以可以拿掉setTimeout
+        }else{                    //若是已經倒數到0，做其他的事
+            document.location='https://www.youtube.com/'
+        }}
+        
+        </script>
+    
+    </head>
+    <body onload="init()">
+        <span id="timer">3</span>
+    </body>
+</html>

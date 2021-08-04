@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>html dom</title>
+<script type="text/javascript">
+function change(){
+    var spanobj=window.document.getElementById('emotion') //window可寫可不寫
+    spanobj.innerHTML='good';
+    spanobj.style.color='red';  //css
+    spanobj.style.fontWeight='bold';  //css
+    //spanobj.style.display='none'   //把物件隱藏
+}
+
+
+
+
+</script>
+</head>
+<body>
+    <div>
+        today is <span id='emotion'>bad</span> day.
+    </div>
+    <button onclick="change()">Change</button> 
+</body>
+</html>

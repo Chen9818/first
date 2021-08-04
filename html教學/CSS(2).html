@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>css教學</title>
+    <style type="text/css">
+    .title{font-weight: bold;font-size: 20px;}
+    .content{width: 300px; padding: 10px;border: 1px solid black;margin-top: 10px;margin-bottom: 10px;}
+    .key{color: gold;font-weight: bold;}
+    .box{
+        position: absolute;right: 0px;top: 0px;                   /*絕對位置是指整個網站的定位，相對位置是指物體原本相對的位置*/
+        width: 100px;height: 100px;background-color: olive;      /*span可以使句子連接不斷行*/
+    }     
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="title">今天天氣不錯</div>
+    <div class="content">
+        我去公園餵<span class="key">鴨子</span>，    
+        鴨子可i。                                         
+    </div>
+
+    <div class="title">今天天氣涼快</div>
+    <div class="content">
+        我去公園打<span class="key">流浪漢</span>，<br/>
+        好爽。
+    </div>
+
+    <div class="content">
+        我去公園打<span class="key">小孩</span><span style="position: relative;top: -8px;">2</span>，<br/>
+        好舒服。
+    </div>
+
+
+
+</body>
+</html>

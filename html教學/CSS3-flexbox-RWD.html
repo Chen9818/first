@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 Flexbox and RWD</title>
+<meta charset="utf-8"/>
+<script type="text/javascript"> 
+
+</script>
+<style type="text/css">
+body{
+    margin: 0px;
+}
+main{/*容器*/
+    display: flex;flex-wrap: wrap;/*flex-wrap使在平板或手機上顯示時可以換行*/
+    justify-content: center;
+    align-items: center;
+    background-color: #cccccc;
+}
+.item{/*項目*/
+    flex: none;/*使大小固定*/
+    width: 300px;margin: 10px;
+    background-color: #ffcccc;
+}
+nav{
+    display: flex;
+}
+.logo{
+    /*沒有彈性，固定尺寸*/
+    flex: none;width: 100px;
+    background-color: #ffcccc;
+}
+.menu{
+    /*盡量把容器張滿*/
+    flex: auto;
+    background-color: #ccccff;
+}
+.user{
+    flex: none;width: 100px;
+    background-color: #ccffcc;
+}
+@media (max-width:1200px){/*500px~1200px*/
+    .item{
+        width: 45%;/*一欄佔據寬的45%，所以兩欄兩欄並排*/
+    }
+}
+@media (max-width:500px){/*500px以下*/
+    .item{
+        width: 90%;
+    }
+}
+</style>
+</head>
+<body>
+    <nav>
+        <div class="logo">logo</div>
+        <div class="menu">menu</div>
+        <div class="user">user</div>
+    </nav>
+    <!--flex如何解決:並排(切欄)，水平對齊，垂直對齊-->
+    <!--
+        RWD回應式設計的關鍵動作:欄位變化
+        Flex如何控制欄位的變化
+        例:4欄>2欄>1欄
+
+        規劃:
+            1200px以上的規劃:4欄，固定尺寸   例:電腦
+            500px~1200px:2欄，彈性尺寸       例:平板
+            500px以下:1欄，彈性尺寸          例:手機
+    -->
+    <main>
+        <div class="item">new1</div>
+        <div class="item">new2</div>
+        <div class="item">new3</div>
+        <div class="item">new4</div>
+    </main>
+</body>
+</html>

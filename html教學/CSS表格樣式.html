@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS表格樣式</title>
+<meta charset="utf-8"/>
+<script type="text/javascript"> 
+
+</script>
+<style type="text/css">
+table{
+    width:400px;border:1px solid #888888;
+    border-collapse: collapse;
+}
+td{
+    border-bottom: 1px solid #888888;padding: 10px;
+}
+/*表格中第一對tr*/
+tr:nth-child(1){
+    background-color: darkgreen;color: white;
+}
+/*表格中的偶數對tr*/
+tr:nth-child(even){
+    background-color: yellowgreen;
+}
+</style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>team</td>
+            <td>win</td>
+            <td>lose</td>
+        </tr>
+        <tr>
+            <td>net</td>
+            <td>62</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>laker</td>
+            <td>55</td>
+            <td>27</td>
+        </tr>
+        <tr>
+            <td>buck</td>
+            <td>66</td>
+            <td>16</td>
+        </tr>
+    </table>
+</body>
+</html>
